@@ -1,0 +1,28 @@
+{
+  "name": "k-nn",
+  "version": "1.0.0",
+  "description": "A k-nearest neighbors algorithm implementation",
+  "main": "src/KNN.js",
+  "scripts": {
+    "test": "nodemon --config nodemon.json --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nihasoft/K-NN.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  },
+  "keywords": [
+    "KNN",
+    "K-NN",
+    "k-nearest neighbors algorithm"
+  ],
+  "author": "Hanor Sátiro Cintra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nihasoft/K-NN/issues"
+  },
+  "homepage": "https://github.com/nihasoft/K-NN#readme"
+}
