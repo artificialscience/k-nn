@@ -4,7 +4,7 @@ A k-nearest neighbors algorithm implementation for Javascript/Typescript
 
 # What this will do ?
 
-In a data context this will classify a feature using a dataset of features meaning a prediction
+In a data context this will classify a feature using a dataset of features, that is a prediction.
 
 ## How it works ?
 
@@ -25,6 +25,53 @@ By default the algorithm will use K as 1, the last index of the feature array as
     2 - Will create an array shuffling the features then will split the data into traning set and test set, using for that the parameters testSize shuffleTimes and the features to train;
     3 - For k times (a parameter of this method) and for every test set will predict and compare the actual goal with the prediction goal to calculte the accuracy;
     4 - Return the best accuracy found and your respective K;
+
+# Installing
+
+`npm install @nihasoft/k-nn`
+
+## Using
+
+For ESM 6
+
+    import * as KNN from '@nihasoft/k-nn';
+Or
+
+    const KNN = require('@nihasoft/k-nn');
+
+## An Example for 3 Dimension
+
+    /*
+    * Note: by default, the algorithm will consider the last index and will use
+    * the dimension passed in KNN constructor as the size of variables to use on the distance
+    * calculator that is the first 3(for this example: new KNN(3) variables in every row on 
+    * the features.
+    */
+    const features = [
+        [10, 0.5068958512233102, 16, 1],
+        [12, 0.5105356367730379, 16, 7],
+        [12, 0.5323562633463617, 16, 7],
+        [40, 0.517546804614676, 16, 2],
+        [48, 0.5158030616769878, 16, 2],
+        [83, 0.5262942735596369, 16, 6],
+        [80, 0.5362942735596369, 16, 6],
+        [97, 0.5281527464327415, 16, 5],
+        [98, 0.5148717143151224, 16, 5],
+        [99, 0.5248717143151224, 16, 5],
+        [100, 0.5148717143151224, 16, 5],
+        [98, 0.5448717143151224, 16, 5],
+        [98, 0.5648717143151224, 16, 5],
+        [94, 0.5148717143151224, 16, 5],
+        [98, 0.52148717143151224, 16, 5]
+    ];
+    const knn = new KNN(3);
+    let [accuracy, k] = knn.traning(features, 4, features.length, 2, true);
+    let goal = knn.predict(features, [100, 0.53, 16]);
+    console.log('Accuracy about: ' + accuracy + ', was predicted the goal as: ' + goal);
+
+# Examples
+
+You can see some examples in ./test/main.js
 
 # Customization
 

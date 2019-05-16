@@ -1,6 +1,6 @@
 {
-  "name": "k-nn",
-  "version": "1.0.0",
+  "name": "@nihasoft/k-nn",
+  "version": "1.0.1",
   "description": "A k-nearest neighbors algorithm implementation",
   "main": "src/KNN.js",
   "scripts": {
