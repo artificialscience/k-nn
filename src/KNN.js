@@ -130,6 +130,10 @@ class KNN {
     }
     traning(outputs, testSize, shuffleTimes, ktimes, normalize) {
 
+        if (outputs.length < testSize) {
+            throw new Error('Your features size is smaller than test size.');
+        }
+
         const [testSet, trainingSet] = this.buildTrainingEnvironment(outputs, testSize, shuffleTimes, normalize);
         let bestAccuracy = -100;
         let bestK = 0;
