@@ -28,16 +28,16 @@ By default the algorithm will use K as 1, the last index of the feature array as
 
 # Installing
 
-`npm install @nihasoft/k-nn`
+`npm install @artificialscience/k-nn`
 
 ## Using
 
 For ESM 6
 
-    import * as KNN from '@nihasoft/k-nn';
+    import * as KNN from '@artificialscience/k-nn';
 Or
 
-    const KNN = require('@nihasoft/k-nn');
+    const KNN = require('@artificialscience/k-nn');
 
 ## An Example for 3 Dimension
 
@@ -89,7 +89,7 @@ The goal function will return the goal of the calculated distance, represents ba
 
  MIT License
 
-Copyright (c) 2019 nihasoft
+Copyright (c) 2019 artificialscience
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

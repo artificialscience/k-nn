@@ -1,5 +1,5 @@
 {
-  "name": "@nihasoft/k-nn",
+  "name": "@artificialscience/k-nn",
   "version": "1.0.1",
   "description": "A k-nearest neighbors algorithm implementation",
   "main": "src/KNN.js",
@@ -8,21 +8,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nihasoft/K-NN.git"
+    "url": "git+https://github.com/artificialscience/K-NN.git"
   },
   "dependencies": {},
   "devDependencies": {
     "nodemon": "^1.18.11"
   },
   "keywords": [
+    "KNN js",
+    "KNN for Javascript",
     "KNN",
     "K-NN",
-    "k-nearest neighbors algorithm"
+    "k-nearest neighbors algorithm",
+    "neighbors algorithm"
   ],
   "author": "Hanor Sátiro Cintra",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nihasoft/K-NN/issues"
+    "url": "https://github.com/artificialscience/K-NN/issues"
   },
-  "homepage": "https://github.com/nihasoft/K-NN#readme"
+  "homepage": "https://github.com/artificialscience/K-NN#readme"
 }
