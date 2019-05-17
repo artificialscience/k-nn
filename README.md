@@ -65,7 +65,7 @@ Or
         [98, 0.52148717143151224, 16, 5]
     ];
     const knn = new KNN(3);
-    let [accuracy, k] = knn.traning(features, 4, features.length, 2, true);
+    let [accuracy, k] = knn.training(features, 4, features.length, 2, true);
     let goal = knn.predict(features, [100, 0.53, 16]);
     console.log('Accuracy about: ' + accuracy + ', was predicted the goal as: ' + goal);
 

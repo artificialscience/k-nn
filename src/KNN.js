@@ -28,7 +28,7 @@ class KNN {
         } else if (this.dimension < 4) {
             return this.distanceNDimension(feature, prediction);
         } else {
-            throw new Error('You should implement a custom distance calculator to this dimension: ' + 4);
+            throw new Error('You should implement a custom distance calculator to this dimension: ' + dimension);
         }
     }
     distance(pointA, pointB) {
@@ -48,7 +48,13 @@ class KNN {
             this.featuresTrained = outputs;
             this.normalizeMap = [];
         }
-        let shuffled = [...this.featuresTrained];
+      
+        let shuffled = this.shuffle(this.featuresTrained, shuffleTimes);
+
+        return [shuffled.slice(0, testSize), shuffled.slice(testSize)];
+    }
+    shuffle(data, shuffleTimes) {
+        let shuffled = [... data];
         let dataSize = shuffled.length;
         for (let i = 0; i < shuffleTimes; i++) {
             let from = Math.floor(Math.random() * dataSize);
@@ -60,10 +66,12 @@ class KNN {
             shuffled = [...shuffled, ...toShuffle, ...endedData];
         }
 
-        if (outputs.length != shuffled.length) {
-            throw new Error('Error on Shuffle the features...');
+        
+        if (data.length != shuffled.length) {
+            throw new Error('Error on shuffling the features...');
         }
-        return [shuffled.slice(0, testSize), shuffled.slice(testSize)];
+
+        return shuffled;
     }
     calculateDimensionsMinMax(outputs) {
         this.normalizeMap = [];
@@ -128,7 +136,7 @@ class KNN {
         }
         return frequency;
     }
-    traning(outputs, testSize, shuffleTimes, ktimes, normalize) {
+    training(outputs, testSize, shuffleTimes, ktimes, normalize) {
 
         if (outputs.length < testSize) {
             throw new Error('Your features size is smaller than test size.');

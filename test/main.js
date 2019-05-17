@@ -6,7 +6,7 @@ class Main {
         const knn = new KNN(3);
         const outputs = this.initialize();
         console.log('Initilizing the training...')
-        let [accuracy, k] = knn.traning(outputs, 100, outputs.length, 20, true);
+        let [accuracy, k] = knn.training(outputs, 100, outputs.length, 20, true);
         console.log(accuracy, k);
         console.log('traning is done.');
         // let lk = knn.predict(outputs, point, iteraction, indexPointToEval, indexPointToCompare);
