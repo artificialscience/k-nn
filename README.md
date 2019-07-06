@@ -42,10 +42,8 @@ Or
 ## An Example for 3 Dimension
 
     /*
-    * Note: by default, the algorithm will consider the last index and will use
-    * the dimension passed in KNN constructor as the size of variables to use on the distance
-    * calculator that is the first 3(for this example: new KNN(3) variables in every row on 
-    * the features.
+    * Note: by default, the algorithm will consider the last index as the goal in the traning mode. Besides that, will use
+    * the dimension passed in KNN constructor as the size of variables to use on the distance calculator.
     */
     const features = [
         [10, 0.5068958512233102, 16, 1],
